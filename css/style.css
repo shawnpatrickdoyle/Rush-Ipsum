@@ -1,0 +1,86 @@
+@font-face { 
+	font-family: 'WorkingMan'; 
+	src: url("../fonts/WorkingMan.eot"); /* EOT file for IE */ 
+	src: local('☺︎'), 
+		url('../fonts/workingman-webfont.woff2') format('woff2'),
+		url('../fonts/workingman-webfont.woff') format('woff'),
+		url('../fonts/WorkingMan.ttf') format('truetype');  
+}
+@font-face { 
+	font-family: 'CounterpartsItalic'; 
+	src: url("../fonts/CounterpartsItalic.eot"); /* EOT file for IE */ 
+	src: local('☺︎'), 
+		url('../fonts/counterpartsitalic-webfont.woff2') format('woff2'),
+		url('../fonts/counterpartsitalic-webfont.woff') format('woff'),
+		url('../fonts/CounterpartsItalic.ttf') format('truetype');  
+}
+/*----------------------*/
+body {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+.container:before {
+	z-index: -1;
+	content: "";
+	height: 100vh;
+	width: 100vw;
+ 	background: 
+ 		url(../images/starman.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	position: absolute;
+	top: 0;
+	left: 0;
+  }
+/*----------------------*/
+header {
+  	font-family: 'WorkingMan', fantasy;
+  	font-size: 4rem;
+  	text-align: center;
+  	margin: 16px auto 0 auto;
+  	width: 90vw;
+  }
+/*----------------------*/
+article { 
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	height: 75vh;
+}
+.content {
+	
+  	background: rgba(255,255,255,.5);
+  	border-radius: 8px;
+  	padding: 16px;
+  	font-family: 'CounterpartsItalic', serif; 
+}
+.selections {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+.lyrics {
+	height: 100%;
+	width: 50vw;
+}
+ul {
+	list-style: none;
+}
+li {
+	font-size: 1.5rem;
+	line-height: 2rem
+}
+/*----------------------*/
+footer {
+	position: absolute;
+	bottom: 0px;
+	width: 95vw;
+	display: flex;
+	justify-content: flex-end;
+}
+.banner {
+	height: 32px;
+}
