@@ -71,7 +71,11 @@ ul {
 }
 li {
 	font-size: 1.5rem;
-	line-height: 2rem
+	line-height: 2rem;
+}
+p {
+	font-size: 1.25rem;
+	line-height: 2rem;
 }
 /*----------------------*/
 footer {

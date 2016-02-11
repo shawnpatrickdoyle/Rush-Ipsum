@@ -10,6 +10,7 @@ function shuffler (array) {
     };
     return shuffle;
 };
+
 /* passageCreator takes the shuffled array and returns an array with
 the desired number of paragraphs of the desired length.
 @param {array} shuffledArray - JSON array that has been shuffled in random order.
@@ -34,12 +35,26 @@ function passageCreator(shuffledArray, passageLength, paragraphLength){
 	return passage;
 }
 
-app.controller('rushemController',function($scope, $http){
-	$http.get("lyric.json")
-	.then(function(response){
-		var lyrics = response.data,
-			ipsum = shuffler(lyrics),
-		return ipsum	
-	});
-	$scope.passage = passageCreator(ipsum)
+var app = angular.module("rushemIpsum",["ngRoute"]);
+app.controller('rushemController', function($scope){
+	$scope.short = function() {
+		ipsumClone = (JSON.parse(JSON.stringify(ipsum)));
+		shuffled = shuffler(ipsumClone);
+		$scope.lyrics = passageCreator(shuffled, 1, 8);
+	};
+	$scope.medium = function() {
+		ipsumClone = (JSON.parse(JSON.stringify(ipsum)));
+		shuffled = shuffler(ipsumClone);
+		$scope.lyrics = passageCreator(shuffled, 3, 6);
+	};
+	$scope.long = function() {
+		ipsumClone = (JSON.parse(JSON.stringify(ipsum)));
+		shuffled = shuffler(ipsumClone);
+		$scope.lyrics = passageCreator(shuffled, 5, 6)
+	};
+	$scope.epic = function() {
+		ipsumClone = (JSON.parse(JSON.stringify(ipsum)));
+		shuffled = shuffler(ipsumClone);
+		$scope.lyrics = passageCreator(shuffled, 16, 10)
+	};
 });

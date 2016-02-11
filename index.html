@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html ng-app="rushsemIpsum" ng-controller="rushemController">
+<html ng-app="rushemIpsum" ng-controller="rushemController">
 <head>
 	<meta charset="utf-8">
 	<title>Rushem Ipsum</title>
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-	<script src="js/rushemIpsum.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
+	<script src="js/lyric.js"></script>
 	<script src="js/rushemController.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -18,14 +19,14 @@
 			<div class="content selections">
 				<h1> How do you want your Rushem Ipsum?</h1>
 				<ul class="length">
-					<li>Fly By Night (short)</li>
-					<li>By-Tor and the Snow Dog (medium)</li>
-					<li>Xanadu (long)</li>
-					<li>2112 (epic)</li>
+					<li ng-click="short()">Fly By Night (short)</li>
+					<li ng-click="medium()">By-Tor and the Snow Dog (medium)</li>
+					<li ng-click="long()">Xanadu (long)</li>
+					<li ng-click="epic()">2112 (epic)</li>
 				</ul>
 			</div>
 			<div class="content lyrics">
-				
+				<p ng-repeat="paragraph in lyrics track by $index" class="ipsum">{{paragraph}}</p>
 			</div>
 		</article>
 		<footer>
