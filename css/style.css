@@ -20,13 +20,13 @@ body {
 	border: 0;
 	padding: 0;
 }
-.container:before {
+/*.container:before {
 	z-index: -1;
 	content: "";
 	height: 100vh;
 	width: 100vw;
  	background: 
- 		url(../images/starman.jpg) no-repeat center center fixed; 
+ 		url(../images/starman.png) no-repeat center center fixed; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -34,56 +34,102 @@ body {
   	position: absolute;
 	top: 0;
 	left: 0;
-  }
+  }*/
 /*----------------------*/
 header {
   	font-family: 'WorkingMan', fantasy;
-  	font-size: 4rem;
+  	width: 100%;
+  	height: 300px;
   	text-align: center;
-  	margin: 16px auto 0 auto;
-  	width: 90vw;
+ 	background-image: url(../images/rush_guitars.jpg); 
   }
+  .title {
+  	font-size: 200px;
+  	letter-spacing: 3px;
+  	  -webkit-text-stroke: 1px white;
+   color: red;
+   opacity: .8;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    /*position: relative;
+    top: 100px;*/
+  }
+  .subtitle {
+  	font-size: 50px;
+  	  -webkit-text-stroke: 1px red;
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    position: relative;
+   	bottom: 50px;
+  }
+  .fly {
+  	background-image: url(../images/flybynight.jpg); 
+  	background-size: 200px;
+  	color: white;
+  	font-size: 21px;
+  	text-shadow: 1px 1px #2e2e1f;
+  }
+  .moving {
+  	background-image: url(../images/movingpictures.jpg); 
+  	background-size: 200px;
+  	color: white;
+  	font-size: 21px;
+  	text-shadow: 1px 1px #2e2e1f;
+  }
+  .farewell {
+  	background-image: url(../images/farewelltokings.jpg); 
+  	background-size: 200px;
+  	color: white;
+  	font-size: 21px;
+  	text-shadow: 1px 1px #2e2e1f;
+  }
+  .starman {
+  	background-image: url(../images/starman1.jpg); 
+  	background-size: 200px;
+  	color: white;
+  	font-size: 21px;
+  	text-shadow: 1px 1px #2e2e1f;
+  }
+
 /*----------------------*/
-article { 
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	height: 75vh;
-}
 .content {
-	
-  	background: rgba(255,255,255,.5);
-  	border-radius: 8px;
-  	padding: 16px;
+  	padding: 38.83px;
   	font-family: 'CounterpartsItalic', serif; 
-}
-.selections {
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
+  	margin-top: 20px;
+  	font-size: 24px;
+	line-height: 38.83px;
 }
 .lyrics {
-	height: 100%;
-	width: 50vw;
+	font-size: 24px;
+	line-height: 38.83px;
 }
-ul {
-	list-style: none;
+button {
+	font-size: 24px;
+	border-radius: 8px;
+	width: 200px;
+	margin-top: 8px;
+	height: 72px;
 }
-li {
-	font-size: 1.5rem;
-	line-height: 2rem;
+h3 {
+	margin-top: 0px;
 }
-p {
-	font-size: 1.25rem;
-	line-height: 2rem;
-}
+
 /*----------------------*/
 footer {
 	position: absolute;
 	bottom: 0px;
 	width: 95vw;
-	display: flex;
-	justify-content: flex-end;
+/*	display: flex;
+	justify-content: flex-end;*/
 }
 .banner {
 	height: 32px;

@@ -35,26 +35,30 @@ function passageCreator(shuffledArray, passageLength, paragraphLength){
 	return passage;
 }
 
+var effects = function(){
+	jQuery("#starman").hide();
+	jQuery(".lyrics").addClass("well well-lg");
+	var ipsumClone = (JSON.parse(JSON.stringify(ipsum)));
+	var shuffled = shuffler(ipsumClone);
+	return shuffled;
+}
+
 var app = angular.module("rushemIpsum",["ngRoute"]);
 app.controller('rushemController', function($scope){
 	$scope.short = function() {
-		ipsumClone = (JSON.parse(JSON.stringify(ipsum)));
-		shuffled = shuffler(ipsumClone);
+		var shuffled = effects();
 		$scope.lyrics = passageCreator(shuffled, 1, 8);
 	};
 	$scope.medium = function() {
-		ipsumClone = (JSON.parse(JSON.stringify(ipsum)));
-		shuffled = shuffler(ipsumClone);
-		$scope.lyrics = passageCreator(shuffled, 3, 6);
+		var shuffled = effects();
+		$scope.lyrics = passageCreator(shuffled, 3, 8);
 	};
 	$scope.long = function() {
-		ipsumClone = (JSON.parse(JSON.stringify(ipsum)));
-		shuffled = shuffler(ipsumClone);
-		$scope.lyrics = passageCreator(shuffled, 5, 6)
+		var shuffled = effects();
+		$scope.lyrics = passageCreator(shuffled, 5, 8)
 	};
 	$scope.epic = function() {
-		ipsumClone = (JSON.parse(JSON.stringify(ipsum)));
-		shuffled = shuffler(ipsumClone);
+		var shuffled = effects();
 		$scope.lyrics = passageCreator(shuffled, 16, 10)
 	};
 });

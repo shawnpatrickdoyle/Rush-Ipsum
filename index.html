@@ -3,34 +3,44 @@
 <head>
 	<meta charset="utf-8">
 	<title>Rushem Ipsum</title>
-	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
 	<script src="js/lyric.js"></script>
 	<script src="js/rushemController.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div class="container">
-		<header>
-			Lorem Ipsum . . . with a thousand percent more Rush
-		</header>
+	<header >
+			<div class="title"> Rush Ipsum</div>
+			<div class="subtitle">Lorem Ipsum . . . with a 1000% more Rush</div>
+	</header>
+	<div class="container-fluid">
 		<article>
-			<div class="content selections">
-				<h1> How do you want your Rushem Ipsum?</h1>
-				<ul class="length">
-					<li ng-click="short()">Fly By Night (short)</li>
-					<li ng-click="medium()">By-Tor and the Snow Dog (medium)</li>
-					<li ng-click="long()">Xanadu (long)</li>
-					<li ng-click="epic()">2112 (epic)</li>
-				</ul>
-			</div>
-			<div class="content lyrics">
-				<p ng-repeat="paragraph in lyrics track by $index" class="ipsum">{{paragraph}}</p>
+			<div class="row">
+				<div class = "col-md-3 col-sm-3 col-xs-6">
+					<div class="content selections">
+						<h3> How do you want your Rushem Ipsum?</h3>
+							<button class="btn-lg fly" ng-click="short()">Fly By Night (short)</button>
+							<button class="btn-lg moving" ng-click="medium()">Red Barchetta (medium)</button>
+							<button class="btn-lg farewell" ng-click="long()">Xanadu (long)</button>
+							<button class="btn-lg starman" ng-click="epic()">2112 (epic)</button>
+						</ul>
+						
+					</div>
+				</div>
+				<div class = "col-md-9 col-sm-9 col-xs-6">
+					<div class="content lyrics">
+						<p ng-repeat="paragraph in lyrics track by $index" class="ipsum">{{paragraph}}</p>
+					</div>
+				</div>
 			</div>
 		</article>
 		<footer>
-			<a href="http://www.2112.net/rushfonts" target="_blank"><img border="1" style="border-color: silver" src="http://www.2112.net/rushfonts/rfpbanner.gif" alt="Click here for the RUSH Font Project" class="banner"></a>
+			<!-- <a href="http://www.2112.net/rushfonts" target="_blank"><img border="1" style="border-color: silver" src="http://www.2112.net/rushfonts/rfpbanner.gif" alt="Click here for the RUSH Font Project" class="banner"></a> -->
 		</footer>
 	</div>
 </body>
