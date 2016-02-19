@@ -2,46 +2,75 @@
 <html ng-app="rushemIpsum" ng-controller="rushemController">
 <head>
 	<meta charset="utf-8">
-	<title>Rushem Ipsum</title>
+	<title>Rush Ipsum</title>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.js"></script>
+   
 	<script src="js/lyric.js"></script>
-	<script src="js/rushemController.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<header >
-			<div class="title"> Rush Ipsum</div>
-			<div class="subtitle">Lorem Ipsum . . . with a 1000% more Rush</div>
+	<header class="normal">
+			<div class="title" id="title">Rush Ipsum</div>
+			<div class="subtitle" id="subtitle">Lorem Ipsum . . . with a 1000% more Rush</div>
 	</header>
 	<div class="container-fluid">
 		<article>
 			<div class="row">
-				<div class = "col-md-3 col-sm-3 col-xs-6">
+				<div class = "col-xs-12 col-sm-4 col-md-3">
 					<div class="content selections">
-						<h3> How do you want your Rushem Ipsum?</h3>
-							<button class="btn-lg fly" ng-click="short()">Fly By Night (short)</button>
-							<button class="btn-lg moving" ng-click="medium()">Red Barchetta (medium)</button>
-							<button class="btn-lg farewell" ng-click="long()">Xanadu (long)</button>
-							<button class="btn-lg starman" ng-click="epic()">2112 (epic)</button>
-						</ul>
-						
+						<h3> How do you want your Rush Ipsum?</h3>
+						<button class="btn-lg fly selector" ng-click="short()">Fly By Night (short)</button>
+						<button class="btn-lg moving selector" ng-click="medium()">Red Barchetta (medium)</button>
+						<button class="btn-lg farewell selector" ng-click="long()">Xanadu (long)</button>
+						<button class="btn-lg starman selector" ng-click="epic()">2112 (epic)</button>
+					</div>
+					<div class="replaceFooter info" style="display: none">
+						<p>Created by <a href="http://shawnpatrickdoyle.com" target="_blank"> Shawn Patrick Doyle </a></p>
+						<p>This site uses <a href="http://www.2112.net/rushfonts" target="_blank">Rush fonts</a></p>
 					</div>
 				</div>
-				<div class = "col-md-9 col-sm-9 col-xs-6">
-					<div class="content lyrics">
-						<p ng-repeat="paragraph in lyrics track by $index" class="ipsum">{{paragraph}}</p>
+				<div class = "col-xs-12 col-sm-8 col-md-9 ">
+					<div class="content lyrics panel panel-default" style="display: none">
+						<div id="clipboard">
+							<button class="btn-sm copy copy-text" data-clipboard-target="#generated">
+								Copy to clipboard
+								<i class="fa fa-clipboard"></i>
+							</button>
+						</div>
+						<div id="generated">
+							<p ng-repeat="paragraph in lyrics track by $index" class="ipsum">
+								{{paragraph}}
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</article>
+	</div>
+	<div class = "container">
 		<footer>
-			<!-- <a href="http://www.2112.net/rushfonts" target="_blank"><img border="1" style="border-color: silver" src="http://www.2112.net/rushfonts/rfpbanner.gif" alt="Click here for the RUSH Font Project" class="banner"></a> -->
+			<div class="row">
+				<div class="col-xs-4 col-sm-4 col-md-4">
+					Site created by <a href="http://shawnpatrickdoyle.com" target="_blank"> Shawn Patrick Doyle </a>
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4">
+					
+				</div>
+				<div class="col-xs-4 col-sm-4 col-md-4">
+					This site uses <a href="http://www.2112.net/rushfonts" target="_blank">Rush fonts</a>
+				</div>
+			</div>
 		</footer>
 	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.5/clipboard.min.js"></script>
+	<script src="js/rushemController.js"></script>
 </body>
 </html>

@@ -20,23 +20,8 @@ body {
 	border: 0;
 	padding: 0;
 }
-/*.container:before {
-	z-index: -1;
-	content: "";
-	height: 100vh;
-	width: 100vw;
- 	background: 
- 		url(../images/starman.png) no-repeat center center fixed; 
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-  	position: absolute;
-	top: 0;
-	left: 0;
-  }*/
-/*----------------------*/
-header {
+
+header.normal {
   	font-family: 'WorkingMan', fantasy;
   	width: 100%;
   	height: 300px;
@@ -71,48 +56,121 @@ header {
     position: relative;
    	bottom: 50px;
   }
-  .fly {
-  	background-image: url(../images/flybynight.jpg); 
-  	background-size: 200px;
-  	color: white;
-  	font-size: 21px;
-  	text-shadow: 1px 1px #2e2e1f;
-  }
-  .moving {
-  	background-image: url(../images/movingpictures.jpg); 
-  	background-size: 200px;
-  	color: white;
-  	font-size: 21px;
-  	text-shadow: 1px 1px #2e2e1f;
-  }
-  .farewell {
-  	background-image: url(../images/farewelltokings.jpg); 
-  	background-size: 200px;
-  	color: white;
-  	font-size: 21px;
-  	text-shadow: 1px 1px #2e2e1f;
-  }
-  .starman {
-  	background-image: url(../images/starman1.jpg); 
-  	background-size: 200px;
-  	color: white;
-  	font-size: 21px;
-  	text-shadow: 1px 1px #2e2e1f;
-  }
-
+  
+header.scroll {
+  	font-family: 'WorkingMan', fantasy;
+  	width: 100%;
+  	height: 72px;
+  	text-align: center;
+ 	background-image: 
+ 		linear-gradient(
+			rgba(25, 25, 25, 0.95), 
+			rgba(25, 25, 55, 0.95)
+	  		),
+ 		url(../images/rush_guitars.jpg); 
+ 	position: fixed;
+ 	top: 0;
+ 	right: 0;
+ 	z-index: 2;
+}
+.title-scroll {
+	font-size: 56px;
+  	letter-spacing: 3px;
+  	  -webkit-text-stroke: 1px white;
+  	margin-right: 30px;
+   	color: red;
+   	opacity: .8;
+   	text-shadow:
+      	3px 3px 0 #000,
+     	-1px -1px 0 #000,  
+     	1px -1px 0 #000,
+     	-1px 1px 0 #000,
+     	1px 1px 0 #000;
+}
+.subtitle-scroll {
+	display: none;
+}
 /*----------------------*/
 .content {
-  	padding: 38.83px;
-  	font-family: 'CounterpartsItalic', serif; 
-  	margin-top: 20px;
-  	font-size: 24px;
+  padding: 38.83px;
+  font-family: 'CounterpartsItalic', serif; 
+  margin-top: 20px;
+  font-size: 24px;
 	line-height: 38.83px;
+}
+.info {
+  padding: 0 38.83px;
+  margin-top: 10px;
 }
 .lyrics {
 	font-size: 24px;
 	line-height: 38.83px;
 }
-button {
+.fly {
+  	background-image: 
+  		linear-gradient(
+			rgba(225, 225, 225, 0.25), 
+			rgba(225, 225, 255, 0.25)
+	  		),
+  		url(../images/flybynight.jpg); 
+  	background-size: 200px;
+  	color: white;
+  	font-size: 21px;
+  	text-shadow: 1px 1px 3px #23282D, 
+               1px 1px 3px #778899;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+  .moving {
+  	background-image: 
+  		linear-gradient(
+			rgba(225, 225, 225, 0.25), 
+			rgba(225, 225, 255, 0.25)
+	  		),
+  		url(../images/movingpictures.jpg); 
+  	background-size: 200px;
+  	color: white;
+  	font-size: 21px;
+  	text-shadow: 1px 1px 3px #23282D, 
+               1px 1px 3px #778899;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+  .farewell {
+  	background-image: 
+  		linear-gradient(
+			rgba(225, 225, 225, 0.25), 
+			rgba(225, 225, 255, 0.25)
+	  		),
+  		url(../images/farewelltokings.jpg);
+  	background-size: 200px;
+  	color: white;
+  	font-size: 21px;
+  	text-shadow: 1px 1px 3px #23282D, 
+               1px 1px 3px #778899;
+  	background-position: center; 
+    background-repeat: no-repeat;
+  }
+  .starman {
+  	background-image: 
+  		linear-gradient(
+			rgba(225, 225, 225, 0.25), 
+			rgba(225, 225, 255, 0.25)
+	  		),
+  		url(../images/starman1.jpg);
+  	background-size: 200px;
+  	color: white;
+  	font-size: 21px;
+  	text-shadow: 1px 1px 3px #23282D, 
+               1px 1px 3px #778899;
+  	background-position: center; 
+    background-repeat: no-repeat;
+}
+button.copy-text { 
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	border-radius: 8px;
+ }
+button.selector {
 	font-size: 24px;
 	border-radius: 8px;
 	width: 200px;
@@ -122,15 +180,52 @@ button {
 h3 {
 	margin-top: 0px;
 }
-
-/*----------------------*/
-footer {
-	position: absolute;
-	bottom: 0px;
-	width: 95vw;
-/*	display: flex;
-	justify-content: flex-end;*/
+#clipboard {
+	text-align: right;
 }
-.banner {
-	height: 32px;
+article.scroll {
+	position: relative;
+	top: 300px;
+}
+footer.scroll {
+  
+}
+article.scrollLock {
+  position: relative;
+  top: 72px;
+}
+h3.scroll {
+	display: none;
+}
+/*----------------------*/
+@media all and (min-width: 300px) and (max-width: 767px) {
+	header.normal {
+  	font-family: 'WorkingMan', fantasy;
+  	width: 100%;
+  	height: 72px;
+  	text-align: center;
+ 	background-image: 
+ 		linear-gradient(
+			rgba(25, 25, 25, 0.95), 
+			rgba(25, 25, 55, 0.95)
+	  		),
+ 		url(../images/rush_guitars.jpg); 
+  	}
+  	.title {
+  	font-size: 56px;
+  	letter-spacing: 3px;
+  	  -webkit-text-stroke: 1px white;
+  	margin-right: 30px;
+   	color: red;
+   	opacity: .8;
+   	text-shadow:
+      3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+  	}
+  	.subtitle {
+  	display: none;
+  	}
 }
