@@ -16,6 +16,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "http://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<header class="normal">
 			<div class="title" id="title">Rush Ipsum</div>
 			<div class="subtitle" id="subtitle">Lorem Ipsum . . . with a 1000% more Rush</div>
@@ -32,6 +40,7 @@
 						<button class="btn-lg starman selector" ng-click="epic()">2112 (epic)</button>
 					</div>
 					<div class="replaceFooter info" style="display: none">
+						<div class="fb-share-button" data-href="https://rushipsum.herokuapp.com/" data-layout="button_count"></div>
 						<p>Created by <a href="http://shawnpatrickdoyle.com" target="_blank"> Shawn Patrick Doyle </a></p>
 						<p>This site uses <a href="http://www.2112.net/rushfonts" target="_blank">Rush fonts</a></p>
 					</div>
@@ -61,7 +70,7 @@
 					Site created by <a href="http://shawnpatrickdoyle.com" target="_blank"> Shawn Patrick Doyle </a>
 				</div>
 				<div class="col-xs-4 col-sm-4 col-md-4">
-					
+					<div class="fb-share-button" data-href="https://rushipsum.herokuapp.com/" data-layout="button_count"></div>
 				</div>
 				<div class="col-xs-4 col-sm-4 col-md-4">
 					This site uses <a href="http://www.2112.net/rushfonts" target="_blank">Rush fonts</a>
