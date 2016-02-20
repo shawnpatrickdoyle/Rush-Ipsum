@@ -197,6 +197,9 @@ article.scrollLock {
 h3.scroll {
 	display: none;
 }
+.logo-inline {
+  display:inline-block;
+}
 /*----------------------*/
 @media all and (min-width: 300px) and (max-width: 767px) {
 	header.normal {
