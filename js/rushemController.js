@@ -81,7 +81,6 @@ var title = jQuery("#title"),
 	article = jQuery('article');
 jQuery(window).scroll(function() {
 	var position = jQuery(document).scrollTop();
-	console.log(position);
   	if (position > 228) {
 	    header.removeClass("normal").addClass("scroll");
 	    title.removeClass("title").addClass("title-scroll");
@@ -95,7 +94,6 @@ jQuery(window).scroll(function() {
 	var position2 = jQuery(document).scrollTop();
 	if (article.hasClass("scroll") && position2 < 229){
 		if (position2 > 0) {
-			console.log ("position2:" + position2);
 			article.css("top", position2+72)
 			}
 		 else {
